@@ -71,5 +71,5 @@ CREATE TABLE users (
     role VARCHAR NOT NULL CHECK (role IN ('student', 'teacher', 'admin')),
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (teaching_group_id) REFERENCES TeachingGroups(id)
+    FOREIGN KEY (teaching_group_id) REFERENCES teaching_groups(id)
 );
