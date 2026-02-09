@@ -48,7 +48,9 @@ CREATE TABLE modules_courses (
 CREATE TABLE programs_modules (
     module_id BIGINT NOT NULL ,
     program_id BIGINT NOT NULL ,
-    PRIMARY KEY (program_id, module_id)
+    PRIMARY KEY (program_id, module_id),
+    FOREIGN KEY (module_id) REFERENCES modules(id),
+    FOREIGN KEY (program_id) REFERENCES programs(id)
 );
 
 CREATE TABLE teaching_groups (
